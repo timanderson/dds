@@ -421,6 +421,10 @@ EXTERN_C DLLEXPORT int STDCALL CalcDDtablePBN(
   struct ddTableDealPBN tableDealPBN,
   struct ddTableResults * tablep);
 
+EXTERN_C DLLEXPORT int STDCALL CalcDDtablePBNVB(
+	struct ddTableDealPBN * tableDealPBN,
+	struct ddTableResults* tablep);
+
 EXTERN_C DLLEXPORT int STDCALL CalcAllTables(
   struct ddTableDeals * dealsp,
   int mode,

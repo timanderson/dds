@@ -350,6 +350,30 @@ int STDCALL CalcDDtablePBN(
   return res;
 }
 
+int STDCALL CalcDDtablePBNVB(
+	ddTableDealPBN * tableDealPBN,
+	ddTableResults* tablep)
+{
+	ddTableDeal tableDeal;
+	if (ConvertFromPBN(tableDealPBN->cards, tableDeal.cards) != 1)
+		return RETURN_PBN_FAULT;
+
+	//SetThreading(0); //single threaded for VB
+	//int icount = 0;
+
+	//for (int i = 0; i < 5; i++) {
+	//	for (int j = 0; j < 4; j++) {
+	//		tablep->resTable[i][j] = icount;
+	//		icount++;
+	//	}
+	//}
+
+	//return 1;
+
+	int res = CalcDDtable(tableDeal, tablep);
+	return res;
+}
+
 
 void DetectCalcDuplicates(
   const boards& bds,

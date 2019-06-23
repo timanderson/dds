@@ -20,6 +20,8 @@ EXPORTS
    CalcDDtable@68 = CalcDDtable
    CalcDDtablePBN
    CalcDDtablePBN@84 = CalcDDtablePBN
+   CalcDDtablePBNVB
+   CalcDDtablePBNVB@8 = CalcDDtablePBNVB
    SolveAllBoards
    SolveAllBoards@8 = SolveAllBoards
    SolveAllChunks
