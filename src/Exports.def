@@ -24,6 +24,8 @@ EXPORTS
    CalcDDtablePBNVB@8 = CalcDDtablePBNVB
    SolveAllBoards
    SolveAllBoards@8 = SolveAllBoards
+   SolveAllBoardsBin
+   SolveAllBoardsBin@8 = SolveAllBoardsBin
    SolveAllChunks
    SolveAllChunks@12 = SolveAllChunks
    SolveAllChunksBin

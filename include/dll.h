@@ -11,19 +11,19 @@
 #ifndef DDS_DLL_H
 #define DDS_DLL_H
 
-#if defined(_WIN32) || defined(__CYGWIN__)
+#if (defined(_WIN32) || defined(__CYGWIN__)) && ! defined(__clang__)
   #define DLLEXPORT __declspec(dllexport)
   #define STDCALL __stdcall
 #else
   #define DLLEXPORT
   #define STDCALL
-  #define INT8 char
 #endif
 
 #ifdef __cplusplus
   #define EXTERN_C extern "C"
 #else
   #define EXTERN_C
+  #include <stdbool.h> // make "bool" available
 #endif
 
 /* Version 2.9.0. Allowing for 2 digit minor versions */
@@ -441,6 +441,10 @@ EXTERN_C DLLEXPORT int STDCALL CalcAllTablesPBN(
 
 EXTERN_C DLLEXPORT int STDCALL SolveAllBoards(
   struct boardsPBN * bop,
+  struct solvedBoards * solvedp);
+
+EXTERN_C DLLEXPORT int STDCALL SolveAllBoardsBin(
+  struct boards * bop,
   struct solvedBoards * solvedp);
 
 EXTERN_C DLLEXPORT int STDCALL SolveAllChunks(
